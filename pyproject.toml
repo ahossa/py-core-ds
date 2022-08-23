@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "py-core-ds"
+version = "0.1.0"
+description = ""
+authors = ["Asif Bin Hossain <asif.hossain@thinktum.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+mypy = "^0.971"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+test = "scripts:run_Test"
+test-type = "scripts:check_types"
+test-all = "scripts:run_TestAll"
