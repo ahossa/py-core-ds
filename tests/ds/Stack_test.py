@@ -1,7 +1,7 @@
 
 ## Create a Testsuite with pytest and test stack class
 from typing import NewType, Tuple
-from py_core_ds.Stack import Stack
+from py_core_ds.ds.Stack import Stack
 from pytest import raises
 
 class TestStack:

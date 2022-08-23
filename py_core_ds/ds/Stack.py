@@ -1,7 +1,8 @@
-from typing import Any, Collection, Iterable, Sequence, Union, Optional, List, Tuple, Dict, Callable, Iterator, Generator, TypeVar, Generic
-from .Types import TYPE
+from typing import Any, Sequence, List , Iterator, TypeVar, Generic
+from typing import TypeVar
 
-# Create a strongly typed Stack class using Generics
+TYPE = TypeVar('TYPE')
+
 class Stack(Generic[TYPE], Sequence[TYPE]):
     def __init__(self) -> None:
         self.items: List[TYPE] = []
