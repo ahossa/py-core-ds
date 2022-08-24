@@ -1,6 +1,5 @@
-# Create a strongly typed queue data structure.
-#
 from typing import Any, Collection, List, Optional, TypeVar, Generic, Sequence, Iterator, Union
+
 TYPE = TypeVar('TYPE')
 
 class Queue(Generic[TYPE], Collection[TYPE]):

@@ -2,7 +2,7 @@
 name = "py-core-ds"
 version = "0.1.0"
 description = ""
-authors = ["Asif Bin Hossain <asif.hossain@thinktum.com>"]
+authors = ["Asif Bin Hossain <asif.bin.hossain.io@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"

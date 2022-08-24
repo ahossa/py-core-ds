@@ -1,5 +1,4 @@
-from typing import Any, Collection, Sequence, List , Iterator, TypeVar, Generic
-from typing import TypeVar
+from typing import Collection, List , Iterator, TypeVar, Generic, TypeVar
 
 TYPE = TypeVar('TYPE')
 
