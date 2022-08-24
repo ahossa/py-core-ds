@@ -1,9 +1,9 @@
-from typing import Any, Sequence, List , Iterator, TypeVar, Generic
+from typing import Any, Collection, Sequence, List , Iterator, TypeVar, Generic
 from typing import TypeVar
 
 TYPE = TypeVar('TYPE')
 
-class Stack(Generic[TYPE], Sequence[TYPE]):
+class Stack(Generic[TYPE], Collection[TYPE]):
     def __init__(self) -> None:
         self.items: List[TYPE] = []
 
@@ -33,18 +33,6 @@ class Stack(Generic[TYPE], Sequence[TYPE]):
 
     def __contains__(self, item: TYPE) -> bool:
         return item in self.items
-
-    def __getitem__(self, index: int) -> TYPE:
-        return self.items[index]
-
-    def __setitem__(self, index: int, item: TYPE) -> None:
-        self.items[index] = item
-
-    def __delitem__(self, index: int) -> None:
-        del self.items[index]
-
-    def __call__(self, *args: Any, **kwargs: Any) -> None:
-        return self.items(*args, **kwargs)
 
     def __next__(self) -> TYPE:
         return self.items.next()

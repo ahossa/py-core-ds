@@ -63,8 +63,10 @@ class TestStack:
         stack = Stack[int]()
         stack.push(1)
         stack.push(2)
-        assert stack[0] == 1
-        assert stack[1] == 2
+        assert stack.peek() == 2
+        assert stack.__contains__(4) == False
+        assert stack.pop() == 2
+        assert stack.pop() == 1
     
     def test_stack_setitem(self) -> None:
         stack = Stack[str]()
@@ -130,10 +132,14 @@ class TestStack:
         stack = Stack[Board]()
         stack.push(Board((1,2)))
         stack.push(Board((2,3)))
+        assert stack.__reversed__().__next__() == Board((2,3))
         assert stack.__len__() == 2
         assert stack.__iter__().__next__() == Board((1,2))
+        assert stack.__contains__(Board((1,2))) == True
+        assert stack.__contains__(Board((10,2))) == False
         assert stack.pop() == Board((2,3))
         assert stack.pop() == Board((1,2))
         assert stack.is_empty() == True
+
 
     
